@@ -36,7 +36,7 @@ public class CharacterMove : MonoBehaviour
     public Rigidbody _rigidbody;
 
 
-    [SerializeField] private float _gap;
+    private const float Gap = 0.001f;
     private float _characterPositionZ;
     private int _characterKolPositionZ = 0;
 
@@ -71,7 +71,7 @@ public class CharacterMove : MonoBehaviour
     {
         if (_isMoving)
         {
-            if (Math.Abs(transform.position.z - _characterPositionZ) <= _gap)
+            if (Math.Abs(transform.position.z - _characterPositionZ) <= Gap)
             {
                 _characterKolPositionZ++;
                 if (_characterKolPositionZ >= 250)
@@ -81,6 +81,15 @@ public class CharacterMove : MonoBehaviour
                     _gameLoseMenu.SetActive(true);
                 }
             }
+        }
+        else
+        {
+            _characterKolPositionZ = 0;
+        }
+
+        if (Time.timeScale == 0f)
+        {
+            _isMoving = false;
         }
 
         _characterPositionZ = transform.position.z;

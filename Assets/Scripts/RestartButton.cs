@@ -9,6 +9,10 @@ public class RestartButton : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (CharacterMove.ActiveSceneLevel != SceneManager.GetActiveScene().buildIndex)
+        {
+            CharacterMove.ActiveSceneLevel -= 1;
+        }
     }
 }
 

@@ -1777,7 +1777,7 @@ MonoBehaviour:
   _speed: 5
   _speedJump: 5.5
   _rigidbody: {fileID: 546381356}
-  _gap: 0.9
+  _gap: 0.001
 --- !u!82 &546381353
 AudioSource:
   m_ObjectHideFlags: 0
