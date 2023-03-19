@@ -1752,7 +1752,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358511206}
-  - component: {fileID: 358511207}
   - component: {fileID: 358511208}
   - component: {fileID: 358511209}
   m_Layer: 0
@@ -1778,18 +1777,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &358511207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358511205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83039c1c3adcf5944bdf2a7f598ebf45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &358511208
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2936,7 +2923,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 640244510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ad95d2bf60df247871de5ecb030a38, type: 3}
+  m_Script: {fileID: 11500000, guid: 83039c1c3adcf5944bdf2a7f598ebf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &640708860
@@ -5748,7 +5735,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 358511207}
+      - m_Target: {fileID: 640244515}
         m_TargetAssemblyTypeName: ButtonMainMenu, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -7377,7 +7364,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 358511207}
+      - m_Target: {fileID: 640244515}
         m_TargetAssemblyTypeName: ButtonMainMenu, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1

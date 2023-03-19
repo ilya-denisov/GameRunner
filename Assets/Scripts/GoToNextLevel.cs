@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.Video;
 
 public class GoToNextLevel : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class GoToNextLevel : MonoBehaviour
     public GameObject _levelMenu; 
     
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter()
     {
         Time.timeScale = 0f;
         _audioWinGame.Play();

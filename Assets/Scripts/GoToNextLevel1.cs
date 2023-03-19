@@ -10,10 +10,10 @@ public class GoToNextLevel1 : MonoBehaviour
         {
             CharacterMove.ActiveSceneLevel = UnityEngine.Random.Range(1, 5);
         }
-        else
-        {
-            CharacterMove.ActiveSceneLevel += 1;
-        }
+        // else
+        // {
+        //     CharacterMove.ActiveSceneLevel += 1;
+        // }
         Time.timeScale = 1f;
         SceneManager.LoadScene(CharacterMove.ActiveSceneLevel);
     }

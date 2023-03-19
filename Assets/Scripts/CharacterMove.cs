@@ -38,11 +38,10 @@ public class CharacterMove : MonoBehaviour
 
     private const float Gap = 0.001f;
     private float _characterPositionZ;
-    private int _characterKolPositionZ = 0;
+    private int _characterKolPositionZ;
 
 
-
-    [FormerlySerializedAs("isMoving")] private bool _isMoving;
+    private bool _isMoving;
 
     private static readonly int Run = Animator.StringToHash("Run");
 
@@ -56,9 +55,9 @@ public class CharacterMove : MonoBehaviour
     private void Start()
     {
         _characterPositionZ = transform.position.z;
-        for (int i = 0; i < _characters.Length; i++)
+        foreach (var t in _characters)
         {
-            _characters[i].SetActive(false);
+            t.SetActive(false);
         }
         Time.timeScale = 1f;
         _characters[CoinsManager.ActiveCharacter].SetActive(true);
@@ -81,10 +80,6 @@ public class CharacterMove : MonoBehaviour
                     _gameLoseMenu.SetActive(true);
                 }
             }
-        }
-        else
-        {
-            _characterKolPositionZ = 0;
         }
 
         if (Time.timeScale == 0f)
@@ -149,14 +144,6 @@ public class CharacterMove : MonoBehaviour
     public void SetFastJump()
     {
         _animator.SetFloat(JumpMultiplierSpeed, 1f);
-    }
-
-    private void OnCactusEnter(Collider collision)
-    {
-        _isMoving = false;
-        _animator.SetBool(Run, false);
-
-        transform.Translate(1.03f, -1.01f, -12.5f);
     }
 
     private void SetCapsuleHeight()
