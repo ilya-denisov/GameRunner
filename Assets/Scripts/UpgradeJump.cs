@@ -27,6 +27,7 @@ public class UpgradeJump : MonoBehaviour
             _kolCoinsText.text = CoinsManager.kolCoins.ToString();
             UpgradeJumpPrice = UpgradeJumpPrice + (UpgradeJumpPrice/2);
             _priceJumpUpgrade.text = UpgradeJumpPrice.ToString();
+            CoinsManager.SaveData();
         }
     }
 }    

@@ -91,17 +91,20 @@ public class CharacterMove : MonoBehaviour
         
         if(Input.GetMouseButtonDown(0))
         {
+            //_isMoving = true;
+            //_animator.SetBool(Run, true);
+            _animator.SetTrigger(Jump);
             _isMoving = true;
             _animator.SetBool(Run, true);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        /*if(Input.GetKeyDown(KeyCode.Space))
         {
             _animator.SetTrigger(Jump);
             _isMoving = true;
             _animator.SetBool(Run, true);
-            /*PlayAudioJump();*/
-        }
+            /*PlayAudioJump();#1#
+        }*/
 
         if(Input.GetMouseButtonUp(0))
         {

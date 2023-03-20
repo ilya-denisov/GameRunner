@@ -15,6 +15,6 @@ public class GoToNextLevel : MonoBehaviour
         Time.timeScale = 0f;
         _audioWinGame.Play();
         _levelMenu.SetActive(true);
-        CharacterMove.ActiveSceneLevel += 1;
+        CoinsManager.SaveData();
     }
 }

@@ -12,8 +12,10 @@ public class ButtonEquipShop : MonoBehaviour
     {
         _buttonsEquip[CoinsManager.ActiveCharacter].SetActive(false);
         _buttonsUnEquip[CoinsManager.ActiveCharacter].SetActive(true);
+        CharacterSkinMenu.ButtonSkinActive[CoinsManager.ActiveCharacter] = 1;
         _buttonUnEquip.SetActive(false);
         _buttonEquip.SetActive(true);
         CoinsManager.ActiveCharacter = _equipCharacterIndex;
+        CharacterSkinMenu.ButtonSkinActive[CoinsManager.ActiveCharacter] = 2;
     }
 }
